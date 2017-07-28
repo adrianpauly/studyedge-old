@@ -1,0 +1,489 @@
+// Variables
+
+$sans: 'museo-sans', sans-serif;
+$slab: 'museo-slab', serif;
+
+// General styles
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $slab;
+	margin: 5px 0;
+}
+h2 {
+	margin: 10px 0;
+	line-height: 1.4;
+	font-size: 30px;
+}
+p {
+	font-size: 15px;
+	line-height: 1.4;
+}
+
+
+// Front page
+
+.home {
+  footer {
+    margin-top: 0;
+  }
+}
+
+
+// Footer 
+
+footer {
+  background: #555;
+  padding: 40px 0 10px;
+  color: #eee;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-top: 40px;
+  .footer-menu {
+    float: left;
+    width: 25%;
+    a {
+      color: #ddd;
+      display: block;
+      line-height: 25px;
+      font-size: 14px;
+    }
+  }
+  .contact-info {
+    float: left;
+    width: 25%;
+    font-size: 14px;
+    color: #eee;
+  }
+  .copy {
+    border-top: 2px solid #666;
+    padding: 10px;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: #CCC;
+    text-align: center;
+  }
+  h3 {
+    color: #AAA;
+    font-family: 'museo-sans', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .social {
+    margin-bottom: 10px;
+    img {
+      width: 30px;
+      opacity: .7;
+      transition: opacity .5s;
+    }
+    a:hover img {
+      opacity: 1;
+    }
+  }
+  .footer-logos {
+    li {
+      list-style-type: none;
+      display: inline-block;
+      & + li {
+        margin-left: 10px;
+      }
+    }
+    img {
+      width: 150px;
+    }
+  }
+}
+
+// 3-image columns (about/pricing) -- or 4!
+
+.image-cols {
+	text-align: center;
+	color: #fff;
+	a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;		
+	}
+	b {
+		height: 200px;
+		display: inline-block;
+		vertical-align: middle;
+		color: #555;
+		line-height: 200px;
+		font-size: 60px;		
+	}
+	img {
+		vertical-align: middle;
+		max-width: 130px;		
+	}
+	h5 {
+		font-family: $sans;
+		font-weight: normal;
+		font-size: 16px;		
+	}
+	&.bigger h5 {
+		font-size: 20px;		
+	}
+	.col-3, .col-4 {
+		position: relative;
+		div {
+			width: 200px;
+			height: 200px;
+			border-radius: 200px;
+			background: #fff;
+			margin: 0 auto 20px;
+			transition: all 0.2s;
+			&:hover {
+				transform: scale(1.1);
+			}		
+		}
+	}
+  .col-4 {
+    width: 24%;
+    display: inline-block;
+    vertical-align: top;
+    a {
+      position: static;
+    }
+  }
+}
+
+
+// Classes block on front page
+
+.classes {
+  background: #e6e6e6;
+  padding: 30px 0;
+  text-shadow: 1px 1px 0 #eee;
+  line-height: 1.3;
+  font-size: 15px;
+  text-transform: uppercase;
+  h2 {
+    color: #1ea8d6;
+    text-align: center;
+  }
+  ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: none;
+  }
+  a {
+    display: block;
+    color: #777;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px 0;
+    &:hover {
+	    color: #1ea8d6;
+	    b {
+	      color: #1ea8d6;
+	    }
+    }
+  }
+  b {
+    width: 4.6em;
+    color: #444;
+    display: inline-block;
+    transition: color .5s;
+  }
+}
+
+.multi-column {
+  -webkit-columns: 300px 3;
+  -moz-columns: 300px 3;
+  columns: 300px 3;
+}
+
+.class_schedule_content {
+  width: 90%;
+  margin: 0 auto;
+  table {
+    float: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .classes {
+    a {
+      padding: 5px 0 5px 79px;
+      text-indent: -40px;
+    }
+    b {
+      width: 1.8em;
+    }
+  }
+
+  .class_schedule_content {
+    width: 55%;
+  }
+}
+
+
+// Mobile app stripe
+.mobile-app {
+  li {
+    list-style-type: none;
+    display: inline-block;
+    & + li {
+      margin-left: 10px;
+    }
+  }
+  img {
+    width: 200px;
+  }
+}
+
+
+
+// Internal hero
+
+.big-image {
+  margin: 0 0 20px;
+  background: url(/wp-content/uploads/images/tutors.jpg) no-repeat center rgb(29, 168, 212);
+  text-align: center;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  color: #fff;
+  background-size: cover;
+  h1 {
+    padding: 50px 0 30px;
+    margin: 0;
+  }
+  h3 {
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .overlay {
+    background: rgba(29, 168, 212, 0.45);
+  }
+  &.short {
+    text-align: left;
+    h1 {
+      padding: 30px 0 20px;
+    }
+    h3 {
+      font-size: 1.5rem;
+      padding-bottom: 20px;      
+    }
+    a {
+      color: #FFF;
+    }
+    .overlay {
+      background: rgba(29, 168, 212, 0.65);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .big-image {
+    margin: 0 0 60px;
+    .overlay {
+      height: 750px;
+    }
+    h1 {
+      padding: 330px 0 40px;
+      font-size: 4rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    &.short {
+      h1 {
+        padding: 65px 0 30px;
+      }
+      h3 {
+        font-size: 2.2rem;
+      }
+      .overlay {
+        height: 325px;
+      }
+    }
+  }
+}
+
+
+// Expert bios
+
+.bio {
+  margin: 0  0 20px 0;
+  line-height: 1.4;
+  h4 {
+    color: #1ea8d6;
+    font-size: 25px;
+  }
+  .col-55 b {
+    font-size: 18px;
+  }
+  .expert-img {
+      position: relative;
+      display: block;
+      border: 10px solid #1ea8d6;
+      border-radius: 20px;
+      background: #fff;
+      margin: 20px 0 40px;
+      &.hidden {
+        background: #1ea8d6;
+      }
+      span {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        height: 68px;
+        background: url('../img/play-blue.png') no-repeat 10px 10px rgba(255, 255, 255, 0.7);
+        padding: 10px 10px 10px 88px;
+        color: #5f6060;
+        text-align: justify;
+        letter-spacing: 1px;
+        &:after { // One line of text justify fix 
+          content: "";
+          display: inline-block;
+          width: 100%;
+        }        
+      }
+      b {
+        font-size: 32px;
+        text-transform: uppercase;
+        font-family: 'museo-slab', serif;
+        line-height: 1.2;
+      }
+      img {
+        display: block;
+        max-height: 250px;
+        margin: 0 auto;
+      }      
+      @media screen and (min-width:768px) {
+        margin: 0;
+        b {
+          font-size: 36px;
+        }        
+      }    
+  }
+}
+
+
+// Class schedule
+
+#schedule {
+  .error-message {
+    text-align: center;
+    margin: 40px auto 0;
+    padding: 0 30px;
+    max-width: 1180px;
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+
+
+// Other
+
+.no-bio-video {
+    min-height: 72px;
+    text-align: center;
+    padding: 100px 0;
+    font-weight: 700;
+}
+
+.help-tab {
+  position: fixed;
+  bottom: 0;
+  right: 40px;
+  background-color: #fff;
+  padding: 10px 20px;
+  width: 280px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  display: none;  
+  transform: translateY(120px);
+  transition: all 0.4s;
+  @media screen and (min-width:768px) {
+    display: block;
+  }
+  p {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 22px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .phone {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .caret {
+    width: 16px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transform: rotate(180deg);
+  }
+  &.active {
+    transform: translateY(0);
+    h2 {
+      font-size: 30px;
+    }
+    .caret {
+      transform: rotate(0);
+    }
+  }
+}
+
+
+// Video demo accordion
+
+.main-video {
+  padding: 0 20%;
+  margin-bottom: 40px;
+}
+
+.demo-folders {
+  h2 {
+    background-size: 7px;
+    padding-left: 20px;
+  }
+}
+
+.video-group {
+  padding: 30px 0;
+  border-top: 1px solid #CCC;
+}
+
+.video-thumbnails {
+  padding: 0;
+  li {
+    list-style-type: none;
+    display: inline-block;
+    max-width: 200px;
+    vertical-align: top;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    &:hover {
+      img {
+        border-color: #1ea8d6;
+      }
+    }
+  }
+  img {
+    width: 150px;
+    border: 1px solid #DDD;
+  }
+  h4, h5 {
+    font-family: $sans;
+  }
+  h4 {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+  h5 {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #669999;
+  }
+}

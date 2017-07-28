@@ -1,0 +1,43 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+
+# add a trailing slash to /wp-admin
+RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
+RewriteRule . index.php [L]
+
+Redirect 301 /rfp http://www.studyedgerfp.com
+Redirect 301 /uf http://www.studyedge.com
+Redirect 301 /tokens https://apps.facebook.com/studyedge/admin/report_007
+Redirect 301 /admin https://apps.facebook.com/studyedge/admin
+Redirect 301 /administrator /wp-admin
+Redirect 301 /app https://apps.facebook.com/studyedge
+Redirect 301 /redeem https://apps.facebook.com/studyedge/?page_name=my_account&tab_to_load=group-codes#group-codes
+Redirect 301 /university-of-florida/help-faq.html /faq
+Redirect 301 /university-of-florida/meet-your-study-experts.html /studyexperts
+Redirect 301 /college/parents-a-professors.html /parentsandprofessors
+Redirect 301 /map2302 /?p=class&class=340
+Redirect 301 /iphone/zachbio http://player.vimeo.com/video/46658514
+Redirect 301 /iphone/derekbio http://player.vimeo.com/video/47622332
+Redirect 301 /iphone/ethanbio http://player.vimeo.com/video/47622330
+Redirect 301 /iphone/richbio http://player.vimeo.com/video/47622331
+Redirect 301 /iphone/grahambio http://player.vimeo.com/video/46658517
+Redirect 301 /iphone/jennbio http://player.vimeo.com/video/46641895
+Redirect 301 /iphone/ashleybio http://player.vimeo.com/video/46658516
+Redirect 301 /iphone/andrewbio http://player.vimeo.com/video/46658515
+Redirect 301 /mac2233/fsu /fsu/?p=class&class=155
+Redirect 301 /fin3403/fsu /fsu/?p=class&class=145
+Redirect 301 /eco2013/fsu /fsu/?p=class&class=141
+Redirect 301 /acg2021/fsu /fsu/?p=class&class=15
+Redirect 301 /acg2071/fsu /fsu/?p=class&class=77
+Redirect 301 /mac1114/fsu /fsu/?p=class&class=149
+Redirect 301 /gmail https://vimeo.com/89531179
+Redirect 301 /mt https://facebook.studyedge.com/mobiletokens
+Redirect 301 /coursecontact https://docs.google.com/document/d/1-XqxoRLTIFdyXooBtM4wENd-5TpjL5casRVbQcqCmG8/edit
+Redirect 301 /party https://www.facebook.com/events/258127224674458/?acontext=%7B%22ref%22%3A%223%22%2C%22ref_newsfeed_story_type%22%3A%22regular%22%2C%22feed_story_type%22%3A%22117%22%2C%22action_history%22%3A%22null%22%7D

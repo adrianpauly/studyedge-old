@@ -1,0 +1,9 @@
+*_config.php
+wp-content/cache
+test.php
+images/
+landing/
+includes/
+wp-content/uploads/
+wp-content/plugins/
+wp-content/themes/twentysixteen/
