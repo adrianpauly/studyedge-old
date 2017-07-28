@@ -7,15 +7,16 @@ if (!isset($_GET['p'])) $_GET['p'] = trim($path, '/');
 add_action('wp_enqueue_scripts', 'init'); 
 
 function init() {
-	wp_enqueue_script('default', network_site_url().'wp-content/themes/studyedge/js/default.js', array('jquery'));
-	wp_enqueue_script('functions', network_site_url().'wp-content/themes/studyedge/js/functions.js', array('jquery'));
-	wp_enqueue_script('routing',  network_site_url().'wp-content/themes/studyedge/js/routing.js', array('jquery'));
+	wp_enqueue_script('default', get_template_directory_uri() . '/js/default.js', array('jquery'));
+	wp_enqueue_script('routing',  get_template_directory_uri() . '/js/routing.js', array('jquery'));
+	wp_enqueue_script('typekit', '//use.typekit.net/bxb0gte.js');
 	wp_enqueue_script('flowplayer', '//releases.flowplayer.org/5.4.3/flowplayer.min.js', array('jquery'));
-	wp_enqueue_script('smartbanner', network_site_url().'wp-content/themes/studyedge/js/jquery-smartbanner/jquery.smartbanner.js', array('jquery'));
+	wp_enqueue_script('smartbanner', get_template_directory_uri() . '/js/jquery-smartbanner/jquery.smartbanner.js', array('jquery'));
+	wp_enqueue_script('functions', get_template_directory_uri() . '/js/functions.js', array('jquery'));
 
-	wp_enqueue_style( 'smartbanner', network_site_url().'wp-content/themes/studyedge/js/jquery-smartbanner/jquery.smartbanner.css', 'jquery');
+	wp_enqueue_style( 'smartbanner', get_template_directory_uri() . '/js/jquery-smartbanner/jquery.smartbanner.css', 'jquery');
 	wp_enqueue_style( 'flowplayer-skin', '//releases.flowplayer.org/5.4.3/skin/minimalist.css', 'jquery');
-	wp_enqueue_style( 'site', network_site_url().'wp-content/themes/studyedge/css/site.css');
+	wp_enqueue_style( 'site', get_template_directory_uri() . '/css/site.css');
 }
 
 define('SCHOOL_ID', intval(get_bloginfo('description')));

@@ -67,11 +67,11 @@ $school_accr = array(
 ?>
 
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="<?php echo $_GET['p'] . ' ' . str_replace('/','',$current_blog->path) ?>">
-<head>
+<html <?php language_attributes(); ?> class="no-js">
 
+<head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-itunes-app" content="app-id=550020899" />
 	<meta name="google-play-app" content="app-id=com.purelogics.studyedge" />
 	<meta name="description" content="Over 50,000 UF students have trusted Zach, Rich, Jenn, Ethan, Ashley, Chris, Jack, Jordan, Marty, Peter, & our other Study Experts to help them get better grades. Shouldn't you?" />
@@ -92,18 +92,12 @@ $school_accr = array(
 	</title>
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<!--[if lt IE 9]>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
-	<![endif]-->
-
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/style.css">
 
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 	<base href="<?php echo $current_blog->path ?>" />
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<?php wp_head() ?>
 
-	<script src="//use.typekit.net/bxb0gte.js"></script>
 	<script type="text/javascript">
 		try{
 			Typekit.load();
@@ -127,6 +121,7 @@ $school_accr = array(
 	</script>
 
 </head>
+
 <body <?php body_class(); ?>>
 	<header>
 		<div class="dark">
